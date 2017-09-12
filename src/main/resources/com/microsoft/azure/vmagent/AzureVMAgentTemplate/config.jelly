@@ -23,17 +23,17 @@
             </f:entry>
 
             <f:entry title="${%Location}" field="location" help="/plugin/azure-vm-agents/help-location.html">
-                <f:select/>
+                <f:textbox/>
             </f:entry>
 
             <f:entry title="${%Virtual_Machine_Size}" field="virtualMachineSize"
                      help="/plugin/azure-vm-agents/help-virtualMachineSize.html">
-                <f:select/>
+                <f:textbox/>
             </f:entry>
 
             <f:entry title="${%Storage_Account_Type}" field="storageAccountType"
                      help="/plugin/azure-vm-agents/help-storageAccountType.html">
-                <f:select/>
+                <f:textbox/>
             </f:entry>
 
             <f:entry title="${%Storage_Account_Name}">
@@ -45,13 +45,13 @@
 
                 <f:radioBlock name="storageAccountNameReferenceType" value="existing" title="${%Storage_Account_Use_Exist}" checked="${instance.isStorageAccountNameReferenceTypeEquals('existing')}" inline="true">
                     <f:entry field="existingStorageAccountName" help="/plugin/azure-vm-agents/help-storageAccountName.html">
-                        <f:select/>
+                        <f:textbox/>
                     </f:entry>
                 </f:radioBlock>
             </f:entry>
 
             <f:entry title="${%Disk_Type}" field="diskType" help="/plugin/azure-vm-agents/help-diskType.html">
-                <f:select/>
+                <f:textbox/>
             </f:entry>
 
             <f:entry title="${%RetentionTimeInMin}" field="retentionTimeInMin"
@@ -65,7 +65,7 @@
             </f:entry>
 
             <f:entry title="${%Usage}" field="usageMode" help="/plugin/azure-vm-agents/help-slaveMode.html">
-                <f:select/>
+                <f:textbox/>
             </f:entry>
         </f:section>
 
@@ -73,7 +73,7 @@
             <f:radioBlock name="imageTopLevelType" value="basic" title="${%Built_In_Image}" checked="${instance == null || instance.isTopLevelType('basic')}"
                           inline="true">
                 <f:entry field="builtInImage">
-                    <f:select/>
+                    <f:textbox/>
                 </f:entry>
 
                 <f:section title="${%Pre_Installed_Tools}">
@@ -119,12 +119,12 @@
                 </f:dropdownList>
 
                 <f:entry title="${%Os_Type}" field="osType" help="/plugin/azure-vm-agents/help-osType.html">
-                    <f:select/>
+                    <f:textbox/>
                 </f:entry>
 
                 <f:entry title="${%Launch_Method}" field="agentLaunchMethod"
                          help="/plugin/azure-vm-agents/help-agentLaunchMethod.html">
-                    <f:select/>
+                    <f:textbox/>
                 </f:entry>
 
                 <f:entry title="${%Pre_Install_Ssh}" field="preInstallSsh"
